@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de programación</title>
+    <script>
+        //first practice
+        //Rock, papel or scissors
+
+        var jugador = parseInt(prompt("Elija una de las tres opciones, 1 = piedra, 2 = papel, 3 = tijera"));
+        var computadora = Math.round(Math.random() * (3 - 1) + 1);
+        console.log("1: Piedra");
+        console.log("2. Papel");
+        console.log("3. tijera");
+        console.log("la computadora es: " + computadora);
+        console.log("Tu eres: " +jugador);
+        function jugar(computadora, jugador){
+            if( computadora == jugador){
+                console.log("empataron");
+            }
+            else if(computadora == 1 && jugador == 2){
+                console.log("ganaste con papel a la piedra");
+            }
+            else if(computadora == 1 && jugador == 3){
+                console.log("la computadora gana con piedra a la tijera");
+            }
+            else if( computadora == 2 && jugador == 1){
+                console.log("la computadora gana con papel a la piedra");
+            }
+            else if( computadora == 2 && jugador == 3){
+                console.log("ganaste con tijera al papel");
+            }
+            else if( computadora == 3 && jugador == 1){
+                console.log("ganaste con piedra a la tijera");
+            }
+            else if( computadora == 3 && jugador == 2){
+                console.log("la computadora gana con tijera al papel");
+            }
+            else{
+                console.log("no elegiste una opcion válida1");
+            }
+        }
+    jugar (computadora, jugador);
+
+    //Second practice
+    // rock, papel or scissors with switch
+    switch (jugador){
+            case 1:
+                if(computadora == 2){
+                    console.log("La computadora gana con papel a piedra");
+                }
+                else if(computadora == 3){
+                    console.log("gnas con piedra a tijera");
+                }
+                else if(computadora == 1){
+                    console.log("empataron");
+                }
+                break;
+            case 2:
+                if(computadora == 3){
+                    console.log("la computadora gana con tijera al papel");
+                }
+                else if(computadora == 1){
+                    console.log("ganas con papel a piedra");
+                }
+                else if(computadora == 2){
+                    console.log("empataron");
+                }
+                break;
+            case 3:
+                if(computadora == 1){
+                    console.log("la computadora gana con piedra a tijera");
+                }
+                else if(computadora == 2){
+                    console.log("ganas con tijra a papel");
+                }
+                else if(computadora == 3){
+                    console.log("empataron");
+                }
+                break;
+            default:
+                console.log("no elegiste una opcion válida2");
+                break;
+        }
+    </script>
+</head>
+<body>
+    <h1>Learning javascript</h1>
+    <h3>Check the console, to see all the practices</h3>
+</body>
+</html>
